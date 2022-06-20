@@ -1,0 +1,31 @@
+:root {
+    --cor-principal: #48D1CC;
+}
+
+.page-footer {
+    background-color: var(--cor-principal) !important;
+}
+
+.row{
+    margin-left: 5px;
+}
+
+#navHeader {
+    background-color: var(--cor-principal) !important;
+}
+
+#buttonEnviar {
+    background-color: var(--cor-principal) !important;
+    margin-left: 600px;
+}
+
+#passwordDiv{
+    margin-left: 3px;
+}
+
+#logo {
+    width: 130px;
+    height: 65px;
+
+
+}

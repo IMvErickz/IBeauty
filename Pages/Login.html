@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/Assets/CSS/styleLogin.css">
+
+    <title>Login</title>
+</head>
+
+<body>
+
+    <header>
+        <nav id="navHeader">
+            <div class="nav-wrapper">
+        
+                <a href="/index.html" class="brand-logo"><img id="logo" src="/Assets/IMG/lBeauty.png" alt=""></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+        
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div>
+
+        <h1 id="tittle"><strong>Seu Login</strong></h1>
+    </div>
+<div>
+    
+   
+    <a href=""><img id="buttonLink" src="/Assets/IMG/Login Facebook.png" alt=""></a>
+</div>
+
+<a href="#" onclick="signOut();">Sign out</a>
+
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+
+    <div class="row">
+        <form class="col s12">
+            <div>
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label> 
+                    <span class="helper-text" data-error="wrong" data-success="right"></span> 
+                    <label for="password" id="labelSenha">Senha</label> 
+                    <input id="password" type="password" class="validate"> 
+                    <span class="helper-text" data-error="wrong" data-success="right"></span>
+                </div>
+            </div>
+        </form>
+  
+    </div>
+
+    
+        
+        <a id ="buttonEnviar" class="waves-effect waves-light btn-small">Entrar</a> <br> 
+        <div>
+            <a id="linkCadastro" href="./escolhaCadastro.html">Cadastre-se aqui</a>
+        </div>
+        
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="/JavaScript/scriptLogin.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+</html>

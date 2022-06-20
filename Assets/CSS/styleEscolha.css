@@ -1,0 +1,28 @@
+:root {
+    --cor-principal: #48D1CC;
+}
+
+#navHeader {
+    background-color: var(--cor-principal) !important;
+}
+
+#buttons{
+    display: flex;
+    align-items: center;
+    width: 250px;
+    margin-left:550px ;
+    
+}
+
+#tittle{
+    margin-left: 500px;
+
+}
+
+#logo {
+    width: 130px;
+    height: 65px;
+
+
+}
+

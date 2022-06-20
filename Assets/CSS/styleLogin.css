@@ -1,0 +1,58 @@
+:root {
+    --cor-principal: #48D1CC;
+}
+
+.page-footer {
+    background-color: var(--cor-principal) !important;
+}
+
+#navHeader {
+    background-color: var(--cor-principal) !important;
+}
+
+#buttonEnviar{
+    background-color: var(--cor-principal) !important;
+    margin-left: 700px;
+    border-radius: 10px;
+}
+
+.row{
+    background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+
+        width: 500px;
+        margin-top:150px ;
+}
+
+#labelSenha{
+    margin-top: 70px;
+}
+
+#imgGoogle{
+    width: 100px;
+    height: 27px;
+}
+
+#buttonLink{
+margin-left: 580px;
+display: flex;
+}
+
+#tittle{
+    margin-left: 600px;
+}
+
+#logo {
+    width: 130px;
+    height: 65px;
+
+
+}
+
+#linkCadastro{
+    margin-left: 690px;
+}

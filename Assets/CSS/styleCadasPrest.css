@@ -1,0 +1,33 @@
+:root {
+    --cor-principal: #48D1CC;
+}
+
+#navHeader {
+    background-color: var(--cor-principal) !important;
+}
+
+#especialidades{
+    margin-left: 300px;
+}
+
+#buttonEnviar{
+    margin-left: 300px;
+    border-radius: 10px;
+}
+
+#principal{
+    margin-left: 400px;
+}
+
+#tittle{
+    margin-left: 550px;
+}
+
+#logo {
+    width: 130px;
+    height: 65px;
+
+
+}
+
+    
