@@ -30,6 +30,13 @@ function gravar() {
     let senha = document.getElementById("password").value
     localStorage.setItem("Senha", senha)
 
+    let confSenha = document.getElementById("confpassword").value
+    localStorage.setItem("Conf", confSenha)
+
+    if (senha != confSenha) {
+        alert("Senhas não conferem")
+    }
+
 
 }
 
@@ -53,6 +60,8 @@ function mostrar() {
     console.log(recEmail)
 
     let recSenha = localStorage.getItem("Senha")
+
+    let recConf = localStorage.getItem("Conf")
 
 
 }
