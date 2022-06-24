@@ -89,9 +89,10 @@ html{
 #annuncement{
     background-color: var(--cor-principal) !important;
     width: 100%;
+    
 }
 .card-title{
-    margin-left: 600px;
+    margin-left: 540px;
     justify-content: center;
 }
 
@@ -115,8 +116,14 @@ html{
 
 }
 
+#sobre{
+    margin-left: 650px;
+}
 
 
+#feedbacks{
+    margin-left: 300px;
+}
 
 
 
