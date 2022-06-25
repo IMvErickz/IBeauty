@@ -15,7 +15,7 @@
         border: 1px solid rgba(255, 255, 255, 0.18);
 
         width: 500px;
-        margin-top:150px ;
+        margin-top:20px ;
 }
 
 #navHeader {
@@ -24,7 +24,8 @@
 
 #buttonEnviar {
     background-color: var(--cor-principal) !important;
-    margin-left: 600px;
+    margin-left: 170px;
+    
 }
 
 #passwordDiv{
