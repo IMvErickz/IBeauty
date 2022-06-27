@@ -34,6 +34,8 @@ function gravar() {
     localStorage.setItem("Conf", confSenha)
 
     if (senha != confSenha) {
+        senha = localStorage.removeItem("Senha")
+        confSenha = localStorage.removeItem("Conf")
         alert("Senhas não conferem")
     }
 
