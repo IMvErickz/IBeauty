@@ -39,6 +39,12 @@ function gravar() {
         confSenha = localStorage.removeItem("Conf")
         alert("Senhas não conferem")
     }
+
+    if (senha.length < 8) {
+        senha = localStorage.removeItem("Senha")
+        confSenha = localStorage.removeItem("Conf")
+        alert("No mínimo 8 caractéres")
+    }
 }
 
 function mostrar() {
