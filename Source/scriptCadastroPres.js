@@ -6,6 +6,7 @@ window.onload = function () {
 function funcoes() {
     gravar()
     mostrar()
+    limpar()
 }
 
 function gravar() {
@@ -73,7 +74,7 @@ function escolhaBarbeiro() {
         span = (span.innerText.replace(/\s/g, ''))
         localStorage.setItem("bar", span)
         let recBar = localStorage.getItem("bar")
-        alert("Barbeiro escolhido")
+        
     } else {
         let remove = localStorage.removeItem("bar")
     }
@@ -87,7 +88,7 @@ function escolhaManicure() {
         span = (span.innerText.replace(/\\s/g, ''))
         localStorage.setItem("man", span)
         let recBar = localStorage.getItem("man")
-        alert("Manicure e pedicure escolhido")
+        
     } else {
         let remove = localStorage.removeItem("man")
     }
@@ -100,9 +101,38 @@ function escolhaEstetica() {
         span = (span.innerText.replace(/\\s/g, ''))
         localStorage.setItem("estetica", span)
         let recBar = localStorage.getItem("estetica")
-        alert("Estética corporal escolhida")
+        
     } else {
-         let remove = localStorage.removeItem("man")
+         let remove = localStorage.removeItem("estetica")
     }
+
+}
+
+function limpar() {
+let nome = document.getElementById("first_name").value = ""
+
+let sobrenome = document.getElementById("last_name").value = ""
+
+let CNPJ = document.getElementById("cnpj").value = ""
+
+let telefone = document.getElementById("phone").value = ""
+
+let DataNac = document.getElementById("nascimento").value = ""
+
+let email = document.getElementById("email").value = ""
+
+let senha = document.getElementById("password").value = ""
+
+    let confSenha = document.getElementById("confpassword").value = ""
+    
+    let escoBar = document.getElementById("barbeiro")
+    let escoMan = document.getElementById("manicure")
+    let escoEst = document.getElementById("estetica")
+    if ((escoBar.checked = true) && (escoMan.checked = true) && (escoEst.checked = true) ) {
+        escoBar.checked = false
+        escoMan.checked = false
+        escoEst.checked = false
+    }
+
 
 }
