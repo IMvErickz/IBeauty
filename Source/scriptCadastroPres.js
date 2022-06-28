@@ -76,45 +76,18 @@ function mostrar() {
 
 }
 
-function escolhaBarbeiro() {
-    let escoBar = document.getElementById("barbeiro")
-    if (escoBar.checked) {
-        let span = document.getElementById("spanBar")
-        span = (span.innerText.replace(/\s/g, ''))
-        localStorage.setItem("bar", span)
-        let recBar = localStorage.getItem("bar")
-        
-    } else {
-        let remove = localStorage.removeItem("bar")
-    }
-}
 
-
-function escolhaManicure() {
-    let escoBar = document.getElementById("manicure")
-    if (escoBar.checked) {
-        let span = document.getElementById("spanMan")
-        span = (span.innerText.replace(/\\s/g, ''))
-        localStorage.setItem("man", span)
-        let recBar = localStorage.getItem("man")
-        
-    } else {
-        let remove = localStorage.removeItem("man")
-    }
-}
-
-function escolhaEstetica() {
-    let escoBar = document.getElementById("estetica")
-    if (escoBar.checked) {
-        let span = document.getElementById("spanEstet")
-        span = (span.innerText.replace(/\\s/g, ''))
-        localStorage.setItem("estetica", span)
-        let recBar = localStorage.getItem("estetica")
-        
-    } else {
-         let remove = localStorage.removeItem("estetica")
-    }
-
+function especialidade(nomeID, spanID, nomeLocal) {
+     let idCheck = document.getElementById(nomeID)
+     if (idCheck.checked) {
+     let idSpan = document.getElementById(spanID)
+     idSpan = (idSpan.innerText.replace(/\\s/g, ''))
+     localStorage.setItem(nomeLocal, idSpan)
+     let recBar = localStorage.getItem(nomeLocal)
+     
+ } else {
+      let remove = localStorage.removeItem(nomeLocal)
+ }
 }
 
 function limpar() {
