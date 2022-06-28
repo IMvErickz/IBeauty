@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "google-auth-library": "^8.0.2"
+    "google-auth-library": "^8.0.2",
+    "sweetalert": "^2.1.2"
   }
 }

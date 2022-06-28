@@ -35,16 +35,18 @@ function gravar() {
     localStorage.setItem("Conf", confSenha)
 
     if (senha != confSenha) {
-        alert("Senhas não conferem")
+        swal("Senhas não conferem","Por favor digite novamente", "error")
         let remove = localStorage.removeItem("Senha")
         let removeconf = localStorage.removeItem("Conf")
     }
 
     if (senha.length < 8) {
-        alert("No mínimo 8 caractéres")
+        swal("No mínimo 8 caractéres", "Por favor digite novamente", "error")
         let remove = localStorage.removeItem("Senha")
         let removeconf = localStorage.removeItem("Conf")
         
+    } else {
+        swal("Parabéns", "Gravado com sucesso", "success")
     }
 
 }
