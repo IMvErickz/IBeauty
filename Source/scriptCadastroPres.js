@@ -38,8 +38,6 @@ function gravar() {
         confSenha = localStorage.removeItem("Conf")
         alert("Senhas não conferem")
     }
-
-
 }
 
 function mostrar() {
@@ -69,14 +67,42 @@ function mostrar() {
 }
 
 function escolhaBarbeiro() {
- alert("Barbeiro escolhido")
+    let escoBar = document.getElementById("barbeiro")
+    if (escoBar.checked) {
+        let span = document.getElementById("spanBar")
+        span = (span.innerText.replace(/\s/g, ''))
+        localStorage.setItem("bar", span)
+        let recBar = localStorage.getItem("bar")
+        alert("Barbeiro escolhido")
+    } else {
+        let remove = localStorage.removeItem("bar")
+    }
 }
 
 
 function escolhaManicure() {
- alert("Manicure e pedicure escolhido")
+    let escoBar = document.getElementById("manicure")
+    if (escoBar.checked) {
+        let span = document.getElementById("spanMan")
+        span = (span.innerText.replace(/\\s/g, ''))
+        localStorage.setItem("man", span)
+        let recBar = localStorage.getItem("man")
+        alert("Manicure e pedicure escolhido")
+    } else {
+        let remove = localStorage.removeItem("man")
+    }
 }
 
 function escolhaEstetica() {
-    alert("Estética corporal esc")
+    let escoBar = document.getElementById("estetica")
+    if (escoBar.checked) {
+        let span = document.getElementById("spanEstet")
+        span = (span.innerText.replace(/\\s/g, ''))
+        localStorage.setItem("estetica", span)
+        let recBar = localStorage.getItem("estetica")
+        alert("Estética corporal escolhida")
+    } else {
+         let remove = localStorage.removeItem("man")
+    }
+
 }
