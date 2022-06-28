@@ -34,6 +34,12 @@ function gravar() {
     let confSenha = document.getElementById("confpassword").value
     localStorage.setItem("Conf", confSenha)
 
+    let inputs = [nome, sobrenome, CNPJ, telefone, email, senha, confSenha]
+
+    if (inputs = [] ) {
+        swal("Os campos estão vazios","Por favor digite novamente", "error")
+    }
+
     if (senha != confSenha) {
         senha = localStorage.removeItem("Senha")
         confSenha = localStorage.removeItem("Conf")
@@ -44,30 +50,25 @@ function gravar() {
     if (senha.length < 8) {
         senha = localStorage.removeItem("Senha")
         confSenha = localStorage.removeItem("Conf")
-        swal("No mínimo 8 caractéres", "Por favor digite novamente", "error")
+        //swal("No mínimo 8 caractéres", "Por favor digite novamente", "error")
     } else {
         swal("Parabéns", "Gravado com sucesso", "success")
+        location.reload()
     }
 }
 
 function mostrar() {
     let recNome = localStorage.getItem("Nome")
-    console.log(recNome)
 
     let recSobrenome = localStorage.getItem("Sobrenome")
-    console.log(recSobrenome)
 
     let recCnpj = localStorage.getItem("Cnpj")
-    console.log(recCnpj)
 
     let recTel = localStorage.getItem("Telefone")
-    console.log(recTel)
 
     let recData = localStorage.getItem("Nascimento")
-    console.log(recData)
 
     let recEmail = localStorage.getItem("Email")
-    console.log(recEmail)
 
     let recSenha = localStorage.getItem("Senha")
 
