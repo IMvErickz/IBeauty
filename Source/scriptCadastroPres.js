@@ -109,19 +109,19 @@ function escolhaEstetica() {
 }
 
 function limpar() {
-let nome = document.getElementById("first_name").value = ""
+    let nome = document.getElementById("first_name").value = ""
 
-let sobrenome = document.getElementById("last_name").value = ""
+    let sobrenome = document.getElementById("last_name").value = ""
 
-let CNPJ = document.getElementById("cnpj").value = ""
+    let CNPJ = document.getElementById("cnpj").value = ""
 
-let telefone = document.getElementById("phone").value = ""
+    let telefone = document.getElementById("phone").value = ""
 
-let DataNac = document.getElementById("nascimento").value = ""
+    let DataNac = document.getElementById("nascimento").value = ""
 
-let email = document.getElementById("email").value = ""
+    let email = document.getElementById("email").value = ""
 
-let senha = document.getElementById("password").value = ""
+    let senha = document.getElementById("password").value = ""
 
     let confSenha = document.getElementById("confpassword").value = ""
     
