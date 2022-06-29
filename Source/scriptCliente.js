@@ -1,3 +1,5 @@
+//const { default: swal } = require("sweetalert")
+
 window.onload = function(){
     let botao = document.getElementById("buttonEnviar")
     botao.addEventListener("click", funcoes)
@@ -34,6 +36,12 @@ function gravar() {
      let confSenha = document.getElementById("passwordConf").value
     localStorage.setItem("Conf", confSenha)
 
+    let inputs = [nome, sobrenome, cpf, telefone, dataNasc, email, senha, confSenha]
+
+    if (inputs = []) {
+        swal("Os campos estão vazios","Por favor digite novamente", "error")
+    }
+
     if (senha != confSenha) {
         swal("Senhas não conferem","Por favor digite novamente", "error")
         let remove = localStorage.removeItem("Senha")
@@ -47,6 +55,7 @@ function gravar() {
         
     } else {
         swal("Parabéns", "Gravado com sucesso", "success")
+        location.reload()
     }
 
 }
