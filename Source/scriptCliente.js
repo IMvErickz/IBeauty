@@ -62,22 +62,16 @@ function gravar() {
 
 function mostrar() {
     let recNome = localStorage.getItem("Nome")
-    console.log(recNome)
 
     let recSobrenome = localStorage.getItem("Sobrenome")
-    console.log(recSobrenome)
 
     let recCpf = localStorage.getItem('CPF')
-    console.log(recCpf)
 
     let recTelefone = localStorage.getItem("Phone")
-    console.log(recTelefone)
 
     let recNasc = localStorage.getItem("Nasc")
-    console.log(recNasc)
 
     let recEmail = localStorage.getItem("Email")
-    console.log(recEmail)
 
     let recSenha = localStorage.getItem("Senha")
 
