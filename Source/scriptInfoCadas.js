@@ -30,6 +30,9 @@ col3.innerHTML = recSobrenome
     
     let col6 = document.createElement("td")
     col6.innerHTML = recEmail
+
+    let col7 = document.createElement("td")
+col7.innerHTML = recSenha
     
     
 novaLinha.appendChild(col1)
@@ -38,6 +41,7 @@ novaLinha.appendChild(col2)
     novaLinha.appendChild(col4)
     novaLinha.appendChild(col5)
     novaLinha.appendChild(col6)
+    novaLinha.appendChild(col7)
 
     
 corpoTab.appendChild(novaLinha)
