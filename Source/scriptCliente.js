@@ -1,7 +1,5 @@
 //const { default: swal } = require("sweetalert")
 
-const { default: swal } = require("sweetalert")
-
 window.onload = function(){
     let botao = document.getElementById("buttonEnviar")
     botao.addEventListener("click", funcoes)
@@ -25,10 +23,6 @@ function gravar() {
 
      let telefone = document.getElementById("phone").value
     localStorage.setItem("Phone", telefone)
-
-    if (telefone.length < 11) {
-        telefone.innerHTML= "Número imcompleto"
-    }
     
      let dataNasc = document.getElementById("nascimento").value
     localStorage.setItem("Nasc", dataNasc)

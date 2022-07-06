@@ -1,0 +1,13 @@
+:root {
+    --cor-principal: #48D1CC;
+}
+#navHeader {
+    background-color: var(--cor-principal) !important;
+}
+
+#logo {
+    width: 130px;
+    height: 65px;
+
+
+}
