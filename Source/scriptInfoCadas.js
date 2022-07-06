@@ -16,11 +16,11 @@ let novaLinha = document.createElement("tr")
     let col1 = document.createElement("td")
     col1.innerHTML = recNome
 
-    let col3 = document.createElement("td")
-col3.innerHTML = recSobrenome
-
     let col2 = document.createElement("td")
-    col2.innerHTML = recCpf
+col2.innerHTML = recSobrenome
+
+    let col3 = document.createElement("td")
+    col3.innerHTML = recCpf
 
     let col4 = document.createElement("td")
     col4.innerHTML = recTelefone
