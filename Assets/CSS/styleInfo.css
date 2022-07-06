@@ -11,3 +11,49 @@
 
 
 }
+thead{
+    margin-left: 400px;
+}
+
+table {
+    /** Faz o estilo da tabela inteira. **/
+    background: #FFF8DC;
+    /** Coloca um fundo laranja. **/
+    border-color: black;
+    /** Insere a borda azul. **/
+    border-style: solid;
+    /** Define a borda pontilhada. **/
+    width: 200px;
+   
+   
+}
+
+tr {
+    /** Faz o estilo para as linhas. **/
+    text-align: center;
+    /** Centraliza o conteúdo. **/
+}
+
+th {
+    /** Faz o estilo para as células do cabeçalho. **/
+    background: #FFF8DC;
+    /** Muda para um fundo cinza. **/
+    color: white;
+    /** Troca a cor da fonte para branco. **/
+}
+
+td .esquerda {
+    /** É feito o estilo das celulas com o auxilio de uma classe. **/
+    text-align: left;
+    /**Alinha o texto da primeira coluna para esquerda. **/
+}
+
+td .centro {
+    text-align: center;
+    /**Centraliza o texto. **/
+}
+
+td .direita {
+    text-align: right;
+    /**Coloca o texto para esquerda. **/
+}
