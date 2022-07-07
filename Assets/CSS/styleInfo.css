@@ -57,3 +57,37 @@ td .direita {
     text-align: right;
     /**Coloca o texto para esquerda. **/
 }
+
+.container {
+    background-color: white;
+    
+}
+
+.row {
+    width: 725px;
+
+
+}
+
+#foot{
+    background-color: var(--cor-principal);
+}
+.white-text{
+    color: black !important;
+}
+
+#annuncement {
+    background-color: var(--cor-principal) !important;
+    width: 100%;
+
+}
+
+#sobre {
+    margin-left: 650px;
+    font-size: 30px;
+}
+
+.card-title {
+    margin-left: 540px;
+    justify-content: center;
+}
