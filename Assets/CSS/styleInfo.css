@@ -24,6 +24,7 @@ table {
     border-style: solid;
     /** Define a borda pontilhada. **/
     width: 200px;
+    margin-left: 350px;
    
    
 }
@@ -90,4 +91,16 @@ td .direita {
 .card-title {
     margin-left: 540px;
     justify-content: center;
+}
+
+#tittles{
+    font-size: 20px;
+    text-align: justify;
+    margin-left: 100px;
+    color: black;
+    
+}
+
+#tittle{
+    margin-left: 500px;
 }
