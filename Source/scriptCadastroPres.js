@@ -12,21 +12,41 @@ function funcoes() {
 function gravar() {
     let nome = document.getElementById("first_name").value
     localStorage.setItem("Nome", nome)
+    if (nome == "") {
+        swal("O campo nome está vazio", "Por favor digite novamente", "error")
+        return 0 
+    }
 
     let sobrenome = document.getElementById("last_name").value
     localStorage.setItem("Sobrenome", sobrenome)
+    if (sobrenome == "") {
+        swal("O campo sobrenome está vazio", "Por favor digite novamente", "error")
+        return 0
+    }
 
     let CNPJ = document.getElementById("cnpj").value
     localStorage.setItem("cnpj", CNPJ)
     
     let telefone = document.getElementById("phone").value
     localStorage.setItem("Telefone", telefone)
+    if (telefone == "") {
+        swal("O campo telefone está vazio", "Por favor digite novamente", "error")
+        return 0 
+    }
     
     let DataNac = document.getElementById("nascimento").value
     localStorage.setItem("Nascimento", DataNac)
+    if (DataNac == "") {
+        swal("O campo Nascimento está vazio", "Por favor digite novamente", "error")
+        return 0 
+    }
 
     let email = document.getElementById("email").value
     localStorage.setItem("Email", email)
+    if (email == "") {
+        swal("O campo email está vazio", "Por favor digite novamente", "error")
+        return 0 
+    }
 
     let senha = document.getElementById("password").value
     localStorage.setItem("Senha", senha)
