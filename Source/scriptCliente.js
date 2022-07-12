@@ -73,9 +73,13 @@ function gravar() {
         let removeconf = localStorage.removeItem("Conf")
         
     } else {
-        swal("Parabéns", "Gravado com sucesso", "success")
-        
+         swal("Parabéns", "Gravado com sucesso", "success")
+             .then(() => {
+             window.location.href = "/Pages/infoCadastro.html"
+         })
+         
     }
+   
 
 }
 
@@ -113,6 +117,6 @@ function limpar() {
  let senha = document.getElementById("password").value = ""
 
     let confSenha = document.getElementById("passwordConf").value = ""
-    window.location.href = "/Pages/infoCadastro.html"
+    
 
 }
