@@ -106,7 +106,7 @@ function limpar() {
 
  let sobrenome = document.getElementById("last_name").value = ""
   
- let cpf = document.getElementById("cpf").value = ""
+ let cpf = document.getElementById("CPF").value = ""
 
  let telefone = document.getElementById("phone").value = ""
 

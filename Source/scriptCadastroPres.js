@@ -17,7 +17,7 @@ function gravar() {
     localStorage.setItem("Sobrenome", sobrenome)
 
     let CNPJ = document.getElementById("cnpj").value
-    localStorage.setItem("Cnpj", CNPJ)
+    localStorage.setItem("cnpj", CNPJ)
     
     let telefone = document.getElementById("phone").value
     localStorage.setItem("Telefone", telefone)
@@ -50,10 +50,13 @@ function gravar() {
     if (senha.length < 8) {
         senha = localStorage.removeItem("Senha")
         confSenha = localStorage.removeItem("Conf")
-        //swal("No mínimo 8 caractéres", "Por favor digite novamente", "error")
+        swal("No mínimo 8 caractéres", "Por favor digite novamente", "error")
     } else {
-        swal("Parabéns", "Gravado com sucesso", "success")
-        location.reload()
+       swal("Parabéns", "Gravado com sucesso", "success")
+    .then(() => {
+    window.location.href = "/Pages/infoCadastro.html"
+})
+       
     }
 }
 
@@ -62,7 +65,7 @@ function mostrar() {
 
     let recSobrenome = localStorage.getItem("Sobrenome")
 
-    let recCnpj = localStorage.getItem("Cnpj")
+    let recCnpj = localStorage.getItem("cnpj")
 
     let recTel = localStorage.getItem("Telefone")
 
@@ -84,7 +87,9 @@ function especialidade(nomeID, spanID, nomeLocal) {
      let idSpan = document.getElementById(spanID)
      idSpan = (idSpan.innerText.replace(/\\s/g, ''))
      localStorage.setItem(nomeLocal, idSpan)
-     let recBar = localStorage.getItem(nomeLocal)
+         let recBar = localStorage.getItem(nomeLocal)
+         let message = document.getElementById(nomeID).value
+         message = swal(message + " escolhido",  "com sucesso", "success")
      
  } else {
       let remove = localStorage.removeItem(nomeLocal)

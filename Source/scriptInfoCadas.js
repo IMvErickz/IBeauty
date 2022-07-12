@@ -1,7 +1,7 @@
 window.onload = function () {
     let recNome = localStorage.getItem("Nome")
 let recSobrenome = localStorage.getItem("Sobrenome")
-let recCpf = localStorage.getItem('CPF')
+let recCpf = localStorage.getItem("CPF")
 let recTelefone = localStorage.getItem("Phone")
     let recNasc = localStorage.getItem("Nasc")
     let nasc = new Date(recNasc)
