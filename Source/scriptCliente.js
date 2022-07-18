@@ -52,6 +52,12 @@ function gravar() {
             .then(() => {
             let remove = localStorage.removeItem("Cliente")
         })
+    } else if (cliente.Senha.length < 8) {
+        swal("Senha de no mínimo 8 caractéres", "Por favor digite novamente", "error")
+            .then(() => {
+            let remove = localStorage.removeItem("Cliente")
+            
+        })
     } else {
         swal("Parabéns", "Gravado com sucesso", "success")
             .then(() => {
