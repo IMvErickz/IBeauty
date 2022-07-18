@@ -1,3 +1,5 @@
+//const { default: swal } = require("sweetalert")
+
 window.onload = function () {
     let botao = document.getElementById("buttonEnviar")
     botao.addEventListener("click", funcoes)
@@ -10,73 +12,38 @@ function funcoes() {
 }
 
 function gravar() {
-    let nome = document.getElementById("first_name").value
-    localStorage.setItem("Nome", nome)
-    if (nome == "") {
-        swal("O campo nome está vazio", "Por favor digite novamente", "error")
-        return 0 
+
+    let prestador = {
+        Nome: document.getElementById("first_name").value,
+        Sobrenome: document.getElementById("last_name").value,
+        CNPJ: document.getElementById("cnpj").value,
+        Telefone: document.getElementById("phone").value,
+        Nascimento: document.getElementById("nascimento").value,
+        Email: document.getElementById("email").value,
+        Senha: document.getElementById("password").value,
+        ConfSenha: document.getElementById("confpassword").value
     }
 
-    let sobrenome = document.getElementById("last_name").value
-    localStorage.setItem("Sobrenome", sobrenome)
-    if (sobrenome == "") {
-        swal("O campo sobrenome está vazio", "Por favor digite novamente", "error")
-        return 0
-    }
+    localStorage.setItem("Prestador", JSON.stringify(prestador))
+    let rec = JSON.parse(localStorage.getItem("Prestador"))
 
-    let CNPJ = document.getElementById("cnpj").value
-    localStorage.setItem("cnpj", CNPJ)
-    
-    let telefone = document.getElementById("phone").value
-    localStorage.setItem("Telefone", telefone)
-    if (telefone == "") {
-        swal("O campo telefone está vazio", "Por favor digite novamente", "error")
-        return 0 
-    }
-    
-    let DataNac = document.getElementById("nascimento").value
-    localStorage.setItem("Nascimento", DataNac)
-    if (DataNac == "") {
-        swal("O campo Nascimento está vazio", "Por favor digite novamente", "error")
-        return 0 
-    }
-
-    let email = document.getElementById("email").value
-    localStorage.setItem("Email", email)
-    if (email == "") {
-        swal("O campo email está vazio", "Por favor digite novamente", "error")
-        return 0 
-    }
-
-    let senha = document.getElementById("password").value
-    localStorage.setItem("Senha", senha)
-
-    let confSenha = document.getElementById("confpassword").value
-    localStorage.setItem("Conf", confSenha)
-
-    let inputs = [nome, sobrenome, CNPJ, telefone, email, senha, confSenha]
-
-    if (inputs = [] ) {
-        swal("Os campos estão vazios","Por favor digite novamente", "error")
-    }
-
-    if (senha != confSenha) {
-        senha = localStorage.removeItem("Senha")
-        confSenha = localStorage.removeItem("Conf")
-        swal("Senhas não conferem","Por favor digite novamente", "error")
-        
-    }
-
-    if (senha.length < 8) {
-        senha = localStorage.removeItem("Senha")
-        confSenha = localStorage.removeItem("Conf")
-        swal("No mínimo 8 caractéres", "Por favor digite novamente", "error")
+    if (prestador.Nome == "" || prestador.Email == "" || prestador.Senha == "") {
+        swal("Os campos estão vazios", "Por favor digite novamente", "error")
+            .then(() => {
+            let remove = localStorage.removeIem("Prestador")
+        })
+    } else if (prestador.Senha != prestador.ConfSenha) {
+        swal("Senhas não conferem", "Por favor digite novamente", "error")
+            .then(() => {
+            let remove = localStorage.removeIem("Prestador")
+        })
+    } else if (prestador.Senha.length < 8) {
+        swal("Senha de no mínimo 8 caractéres", "Por favor digite novamente", "error")
+            .then(() => {
+            let remove = localStorage.removeIem("Prestador")
+        })
     } else {
-       swal("Parabéns", "Gravado com sucesso", "success")
-    .then(() => {
-    window.location.href = "/Pages/infoCadastro.html"
-})
-       
+        swal("Parabéns", "Gravado com sucesso", "success")
     }
 }
 
