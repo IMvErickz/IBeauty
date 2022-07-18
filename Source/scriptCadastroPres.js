@@ -78,8 +78,12 @@ function especialidade(nomeID, spanID, nomeLocal) {
          let message = document.getElementById(nomeID).value
          message = swal(message + " escolhido",  "com sucesso", "success")
      
- } else {
-      let remove = localStorage.removeItem(nomeLocal)
+     } else {
+         swal("Escolha uma especialidade", "Por favor clique novamente", "error")
+             .then(() => {
+                 let remove = localStorage.removeItem(nomeLocal)
+             
+         })
  }
 }
 
