@@ -16,7 +16,7 @@ function gravar() {
     const cliente = {
         Nome: document.getElementById("first_name").value,
         Sobrenome: document.getElementById("last_name").value,
-        Cpf: document.getElementById("cpf").value,
+        Cpf: document.getElementById("cpf").value.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4"),
         Telefone: document.getElementById("phone").value,
         Nascimento: document.getElementById("nascimento").value,
         Email: document.getElementById("email").value,
@@ -27,11 +27,6 @@ function gravar() {
     localStorage.setItem("Cliente", JSON.stringify(cliente))
     let rec = JSON.parse(localStorage.getItem("Cliente"))
     console.log(rec)
-
-    let cpfEdited = cliente.Cpf.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4")
-    localStorage.setItem("Cpfedited", JSON.stringify(cpfEdited))
-    let recCpf = JSON.parse(localStorage.getItem("Cpfedited"))
-    console.log(recCpf)
     
     function isEmpty(obj) {
         return Object.keys(obj).length === 0;
