@@ -16,17 +16,13 @@ function gravar() {
     let prestador = {
         Nome: document.getElementById("first_name").value,
         Sobrenome: document.getElementById("last_name").value,
-        CNPJ: document.getElementById("cnpj").value,
+        CNPJ: document.getElementById("cnpj").value.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5"),
         Telefone: document.getElementById("phone").value,
         Nascimento: document.getElementById("nascimento").value,
         Email: document.getElementById("email").value,
         Senha: document.getElementById("password").value,
         ConfSenha: document.getElementById("confpassword").value
     }
-   
-
-    let cnpjEdited = prestador.CNPJ.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5")
-    localStorage.setItem("CNPJedit", JSON.stringify(cnpjEdited))
 
     localStorage.setItem("Prestador", JSON.stringify(prestador))
     let rec = JSON.parse(localStorage.getItem("Prestador"))
