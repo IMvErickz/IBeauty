@@ -67,24 +67,6 @@ function gravar() {
     }
 }
 
-function mostrar() {
-    let recNome = localStorage.getItem("Nome")
-
-    let recSobrenome = localStorage.getItem("Sobrenome")
-
-    let recCpf = localStorage.getItem('CPF')
-
-    let recTelefone = localStorage.getItem("Phone")
-
-    let recNasc = localStorage.getItem("Nasc")
-
-    let recEmail = localStorage.getItem("Email")
-
-    let recSenha = localStorage.getItem("Senha")
-
-    let recConf = localStorage.getItem("Conf")
-}
-
 function limpar() {
     let nome = document.getElementById("first_name").value = ""
 
