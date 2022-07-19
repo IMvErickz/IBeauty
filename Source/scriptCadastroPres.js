@@ -4,7 +4,7 @@ window.onload = function () {
     let botao = document.getElementById("buttonEnviar")
     botao.addEventListener("click", funcoes)
 }
-
+//console.log("37356542000101".replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5"))
 function funcoes() {
     gravar()
     mostrar()
@@ -23,6 +23,17 @@ function gravar() {
         Senha: document.getElementById("password").value,
         ConfSenha: document.getElementById("confpassword").value
     }
+
+    let inputCnpj = document.getElementById("cnpj").value
+        inputCnpj.addEventListener('input', function (e) {
+      let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,3})(\d{0,3})(\d{0,4})(\d{0,2})/);
+      e.target.value = !x[2] ? x[1] : x[1] + '.' + x[2] + '.' + x[3] + '/' + x[4] + (x[5] ? '-' + x[5] : '');
+        });
+    
+   
+
+    let cnpjEdited = prestador.CNPJ.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5")
+    localStorage.setItem("CNPJedit", JSON.stringify(cnpjEdited))
 
     localStorage.setItem("Prestador", JSON.stringify(prestador))
     let rec = JSON.parse(localStorage.getItem("Prestador"))
