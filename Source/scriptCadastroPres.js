@@ -30,17 +30,17 @@ function gravar() {
     if (prestador.Nome == "" || prestador.Email == "" || prestador.Senha == "") {
         swal("Os campos estão vazios", "Por favor digite novamente", "error")
             .then(() => {
-            let remove = localStorage.removeIem("Prestador")
+            let remove = localStorage.removeItem("Prestador")
         })
     } else if (prestador.Senha != prestador.ConfSenha) {
         swal("Senhas não conferem", "Por favor digite novamente", "error")
             .then(() => {
-            let remove = localStorage.removeIem("Prestador")
+            let remove = localStorage.removeItem("Prestador")
         })
     } else if (prestador.Senha.length < 8) {
         swal("Senha de no mínimo 8 caractéres", "Por favor digite novamente", "error")
             .then(() => {
-            let remove = localStorage.removeIem("Prestador")
+            let remove = localStorage.removeItem("Prestador")
         })
     } else {
         swal("Parabéns", "Gravado com sucesso", "success")
