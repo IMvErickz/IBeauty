@@ -27,6 +27,11 @@ function gravar() {
     localStorage.setItem("Cliente", JSON.stringify(cliente))
     let rec = JSON.parse(localStorage.getItem("Cliente"))
     console.log(rec)
+
+    let cpfEdited = cliente.Cpf.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4")
+    localStorage.setItem("Cpfedited", JSON.stringify(cpfEdited))
+    let recCpf = JSON.parse(localStorage.getItem("Cpfedited"))
+    console.log(recCpf)
     
     function isEmpty(obj) {
         return Object.keys(obj).length === 0;
