@@ -47,26 +47,6 @@ function gravar() {
     }
 }
 
-function mostrar() {
-    let recNome = localStorage.getItem("Nome")
-
-    let recSobrenome = localStorage.getItem("Sobrenome")
-
-    let recCnpj = localStorage.getItem("cnpj")
-
-    let recTel = localStorage.getItem("Telefone")
-
-    let recData = localStorage.getItem("Nascimento")
-
-    let recEmail = localStorage.getItem("Email")
-
-    let recSenha = localStorage.getItem("Senha")
-
-    let recConf = localStorage.getItem("Conf")
-
-
-}
-
 
 function especialidade(nomeID, spanID, nomeLocal) {
      let idCheck = document.getElementById(nomeID)
