@@ -17,7 +17,7 @@ function gravar() {
         Nome: document.getElementById("first_name").value,
         Sobrenome: document.getElementById("last_name").value,
         Cpf: document.getElementById("cpf").value.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4"),
-        Telefone: document.getElementById("phone").value,
+        Telefone: document.getElementById("phone").value.replace(/^(\d{2})(\d{5})(\d{4})/, "$1 $2-$3"),
         Nascimento: document.getElementById("nascimento").value,
         Email: document.getElementById("email").value,
         Senha: document.getElementById("password").value,
