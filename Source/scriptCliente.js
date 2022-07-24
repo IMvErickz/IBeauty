@@ -66,23 +66,3 @@ function gravar() {
         
     }
 }
-
-function limpar() {
-    let nome = document.getElementById("first_name").value = ""
-
- let sobrenome = document.getElementById("last_name").value = ""
-  
- let cpf = document.getElementById("CPF").value = ""
-
- let telefone = document.getElementById("phone").value = ""
-
- let dataNasc = document.getElementById("nascimento").value = ""
-
- let email = document.getElementById("email").value = ""
-
- let senha = document.getElementById("password").value = ""
-
-    let confSenha = document.getElementById("passwordConf").value = ""
-    
-
-}
