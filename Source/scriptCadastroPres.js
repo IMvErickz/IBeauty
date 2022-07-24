@@ -44,6 +44,9 @@ function gravar() {
         })
     } else {
         swal("Parabéns", "Gravado com sucesso", "success")
+            .then(() => {
+            location.reload()
+        })
     }
 }
 
