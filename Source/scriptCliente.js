@@ -42,7 +42,8 @@ function gravar() {
     //console.log(ObjCompare(cliente, []))
     let remove = localStorage.removeItem("Cliente")
   
-    if (cliente.Email == "" || cliente.Cpf == "" || cliente.Senha == "") {
+    if (cliente.Email == "" || cliente.Cpf == "" || cliente.Senha == "" || cliente.Nome == "" ||
+        cliente.Telefone == "" || cliente.Nascimento == "") {
         swal("Os campos estão vazios", "Por favor digite novamente", "error")
         .then(() => {
             remove
