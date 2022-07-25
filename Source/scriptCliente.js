@@ -40,22 +40,23 @@ function gravar() {
     return false;
 }
     //console.log(ObjCompare(cliente, []))
+    let remove = localStorage.removeItem("Cliente")
   
     if (cliente.Email == "" || cliente.Cpf == "" || cliente.Senha == "") {
         swal("Os campos estão vazios", "Por favor digite novamente", "error")
         .then(() => {
-            let remove = localStorage.removeItem("Cliente")
+            remove
             
         })
     } else if(cliente.Senha != cliente.ConfSenha){
         swal("As senhas não conferem", "Por favor digite novamente", "error")
             .then(() => {
-            let remove = localStorage.removeItem("Cliente")
+            remove
         })
     } else if (cliente.Senha.length < 8) {
         swal("Senha de no mínimo 8 caractéres", "Por favor digite novamente", "error")
             .then(() => {
-            let remove = localStorage.removeItem("Cliente")
+           remove
             
         })
     } else {
