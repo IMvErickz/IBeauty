@@ -24,7 +24,7 @@ function gravar() {
         ConfSenha: document.getElementById("passwordConf").value
     }
 
-    localStorage.setItem("Cliente", JSON.stringify(cliente))
+    
     let rec = JSON.parse(localStorage.getItem("Cliente"))
     console.log(rec)
     
@@ -64,6 +64,7 @@ function gravar() {
         swal("Parabéns", "Gravado com sucesso", "success")
             .then(() => {
             window.location.href = "/Pages/infoCadastro.html"
+                localStorage.setItem("Cliente", JSON.stringify(cliente))
         })
         
     }
