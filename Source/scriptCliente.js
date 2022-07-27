@@ -7,8 +7,6 @@ window.onload = function(){
 
 function funcoes() {
     gravar()
-    mostrar()
-    limpar()   
 }
 
 //Teste de objeto
@@ -33,12 +31,6 @@ function gravar() {
     }
     console.log(isEmpty({ cliente }))
 
-    function ObjCompare(obj1, obj2){
-    if (obj1 === obj2){
-        return true;
-    };
-    return false;
-}
     //console.log(ObjCompare(cliente, []))
     let remove = localStorage.removeItem("Cliente")
   
@@ -63,7 +55,7 @@ function gravar() {
     } else {
         swal("Parabéns", "Gravado com sucesso", "success")
             .then(() => {
-            window.location.href = "/Pages/infoCadastro.html"
+            //window.location.href = "/Pages/infoCadastro.html"
                 localStorage.setItem("Cliente", JSON.stringify(cliente))
         })
         
