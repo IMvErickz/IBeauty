@@ -54,11 +54,8 @@ html{
     color: black;
 }
 
-#search{
+
     
-    color: black;
-    
-}
 
 #navHeader{
     background-color: var(--cor-principal) !important;
@@ -102,6 +99,10 @@ html{
     display: flex;
     justify-content:center;
     border-right: 0px;
+}
+
+#inconSearch{
+    color: black;
 }
 
 #inconeLinks{
