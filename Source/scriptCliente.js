@@ -55,7 +55,7 @@ function gravar() {
     } else {
         swal("Parabéns", "Gravado com sucesso", "success")
             .then(() => {
-            //window.location.href = "/Pages/infoCadastro.html"
+            window.location.href = "/Pages/infoCadastro.html"
                 localStorage.setItem("Cliente", JSON.stringify(cliente))
         })
         
