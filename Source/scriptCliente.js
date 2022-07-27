@@ -18,13 +18,16 @@ function gravar() {
         Telefone: document.getElementById("phone").value.replace(/^(\d{2})(\d{5})(\d{4})/, "$1 $2-$3"),
         Nascimento: document.getElementById("nascimento").value,
         Email: document.getElementById("email").value,
-        Senha: document.getElementById("password").value,
+        Senha: document.getElementById("password").value
+            .replace(document.getElementById("password").value, "*******"),
         ConfSenha: document.getElementById("passwordConf").value
+            .replace(document.getElementById("passwordConf").value, "*******")
     }
 
     
     let rec = JSON.parse(localStorage.getItem("Cliente"))
     console.log(rec)
+    console.log(cliente.Senha)
     
     function isEmpty(obj) {
         return Object.keys(obj).length === 0;
