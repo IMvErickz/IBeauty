@@ -19,9 +19,9 @@ function gravar() {
         Nascimento: document.getElementById("nascimento").value,
         Email: document.getElementById("email").value,
         Senha: document.getElementById("password").value
-            .replace(document.getElementById("password").value, "*******"),
+            .replace(document.getElementById("password").value, "********"),
         ConfSenha: document.getElementById("passwordConf").value
-            .replace(document.getElementById("passwordConf").value, "*******")
+            .replace(document.getElementById("passwordConf").value, "********")
     }
 
     
