@@ -26,7 +26,6 @@ function gravar() {
     swal("Dados incorretos", "Por favor tente novamente", "error")
       .then(() => {
         limpar()
-        
     })
   }
     
