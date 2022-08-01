@@ -19,10 +19,14 @@ function gravar() {
 
   if (email.Email == inputEmail && password.Senha == inputPass) {
     swal("Logado", "Dados corretos", "success")
+      .then(() => {
+      window.location.href = "/Pages/Perfil.html"
+    })
   } else {
     swal("Dados incorretos", "Por favor tente novamente", "error")
       .then(() => {
-      limpar()
+        limpar()
+        
     })
   }
     
