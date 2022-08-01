@@ -17,7 +17,7 @@ function gravar() {
   let inputPass = document.getElementById("password").value
   let password = JSON.parse(localStorage.getItem("Cliente"))
 
-  if (email.Email == inputEmail || password.Senha == inputPass) {
+  if (email.Email == inputEmail && password.Senha == inputPass) {
     swal("Logado", "Dados corretos", "success")
   } else {
     swal("Dados incorretos", "Por favor tente novamente", "error")
