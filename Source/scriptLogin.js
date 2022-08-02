@@ -18,7 +18,7 @@ function gravar() {
   let password = JSON.parse(localStorage.getItem("Cliente"))
 
   if (email.Email == inputEmail && password.Senha == inputPass) {
-    swal("Logado", "Dados corretos", "success")
+    swal("Bem-vindo", "Dados corretos", "success")
       .then(() => {
       window.location.href = "/Pages/Perfil.html"
     })
