@@ -52,7 +52,12 @@ function gravar() {
            remove
             
         })
-    } else {
+    } else if (cliente.Cpf.length < 11) {
+        swal("CPF com no mínimo 11 dígitos", "Por favor digite novamente", "error")
+            .then(() => {
+            remove
+        })
+    }else {
         swal("Parabéns", "Gravado com sucesso", "success")
             .then(() => {
             window.location.href = "/Pages/infoCadastro.html"
