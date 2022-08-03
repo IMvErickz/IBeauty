@@ -33,6 +33,7 @@ function gravar() {
 
     //console.log(ObjCompare(cliente, []))
     let remove = localStorage.removeItem("Cliente")
+    let cpfSize = cliente.Cpf.length
   
     if (cliente.Email == "" || cliente.Cpf == "" || cliente.Senha == "" || cliente.Nome == "" ||
         cliente.Telefone == "" || cliente.Nascimento == "") {
@@ -52,7 +53,7 @@ function gravar() {
            remove
             
         })
-    } else if (cliente.Cpf.length < 11) {
+    } else if (cpfSize < 11) {
         swal("CPF com no mínimo 11 dígitos", "Por favor digite novamente", "error")
             .then(() => {
             remove
