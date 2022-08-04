@@ -1,38 +1,30 @@
 window.onload = function () {
-    let recNome = localStorage.getItem("Nome")
-let recSobrenome = localStorage.getItem("Sobrenome")
-let recCpf = localStorage.getItem("CPF")
-let recTelefone = localStorage.getItem("Phone")
-    let recNasc = localStorage.getItem("Nasc")
-    let nasc = new Date(recNasc)
-    let nascFomrt = nasc.toLocaleDateString('pt-BR', {timeZone: 'UTC'})
-let recEmail = localStorage.getItem("Email")
-let recSenha = localStorage.getItem("Senha")
-    let recConf = localStorage.getItem("Conf")
+    let recCliente = JSON.parse(localStorage.getItem("Cliente"))
+    console.log(recCliente)
     
     let corpoTab = document.getElementById("corpoTabela")
 let novaLinha = document.createElement("tr")
 
     let col1 = document.createElement("td")
-    col1.innerHTML = recNome
+    col1.innerHTML = recCliente.Nome
 
     let col2 = document.createElement("td")
-col2.innerHTML = recSobrenome
+col2.innerHTML = recCliente.Sobrenome
 
     let col3 = document.createElement("td")
-    col3.innerHTML = recCpf
+    col3.innerHTML = recCliente.Cpf
 
     let col4 = document.createElement("td")
-    col4.innerHTML = recTelefone
+    col4.innerHTML = recCliente.Telefone
     
     let col5 = document.createElement("td")
-    col5.innerHTML = nascFomrt
+    col5.innerHTML = recCliente.Nascimento
     
     let col6 = document.createElement("td")
-    col6.innerHTML = recEmail
+    col6.innerHTML = recCliente.Email
 
     let col7 = document.createElement("td")
-col7.innerHTML = recSenha
+col7.innerHTML = recCliente.Senha
     
     
 novaLinha.appendChild(col1)
