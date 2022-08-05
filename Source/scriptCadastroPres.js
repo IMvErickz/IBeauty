@@ -7,7 +7,6 @@ window.onload = function () {
 //console.log("37356542000101".replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5"))
 function funcoes() {
     gravar()
-    mostrar()
     limpar()
 }
 
@@ -29,7 +28,6 @@ function gravar() {
 
     let remove = localStorage.removeItem("Prestador")
     let cnpjSize = prestador.CNPJ.length
-    console.log(cnpjSize)
 
     if (prestador.Nome == "" || prestador.Email == "" || prestador.Senha == "") {
         swal("Os campos estão vazios", "Por favor digite novamente", "error")
