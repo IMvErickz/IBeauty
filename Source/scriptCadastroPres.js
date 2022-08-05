@@ -28,6 +28,8 @@ function gravar() {
     let rec = JSON.parse(localStorage.getItem("Prestador"))
 
     let remove = localStorage.removeItem("Prestador")
+    let cnpjSize = prestador.CNPJ.length
+    console.log(cnpjSize)
 
     if (prestador.Nome == "" || prestador.Email == "" || prestador.Senha == "") {
         swal("Os campos estão vazios", "Por favor digite novamente", "error")
@@ -44,7 +46,12 @@ function gravar() {
             .then(() => {
             remove
         })
-    } else {
+    } else if (cnpjSize < 18) {
+        swal("CNPJ incorreto", "Por favor digite novamente", "error")
+            .then(() => {
+            remove 
+        })
+    }else {
         swal("Parabéns", "Gravado com sucesso", "success")
             .then(() => {
             location.reload()
