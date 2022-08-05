@@ -23,7 +23,7 @@ function gravar() {
         ConfSenha: document.getElementById("confpassword").value
     }
 
-    localStorage.setItem("Prestador", JSON.stringify(prestador))
+    
     let rec = JSON.parse(localStorage.getItem("Prestador"))
 
     let remove = localStorage.removeItem("Prestador")
@@ -52,7 +52,8 @@ function gravar() {
     }else {
         swal("Parabéns", "Gravado com sucesso", "success")
             .then(() => {
-            location.reload()
+                localStorage.setItem("Prestador", JSON.stringify(prestador))
+                location.reload()
         })
     }
 }
