@@ -20,10 +20,8 @@ function gravar() {
         Telefone: document.getElementById("phone").value.replace(/^(\d{2})(\d{5})(\d{4})/, "$1 $2-$3"),
         Nascimento: document.getElementById("nascimento").value,
         Email: document.getElementById("email").value,
-        Senha: document.getElementById("password").value
-        .replace(document.getElementById("password").value, "*******"),
+        Senha: document.getElementById("password").value,
         ConfSenha: document.getElementById("confpassword").value
-        .replace(document.getElementById("password").value, "*******")
     }
 
     localStorage.setItem("Prestador", JSON.stringify(prestador))
