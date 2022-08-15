@@ -40,5 +40,6 @@
 }
 
 #tittle{
-    margin-left: 570px;
+    display: flex;
+    justify-content: center;
 }
