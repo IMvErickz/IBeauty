@@ -12,8 +12,13 @@
 
 #buttonEnviar{
     background-color: var(--cor-principal) !important;
-    margin-left: 700px;
-    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100px;
+    margin-left: 620px;
+   
+    
 }
 
 .row{
@@ -40,10 +45,12 @@
 #buttonLink{
 margin-left: 580px;
 display: flex;
+border-right: ;
 }
 
 #tittle{
-    margin-left: 600px;
+    display: flex;
+    justify-content: center;
 }
 
 #logo {
@@ -54,5 +61,6 @@ display: flex;
 }
 
 #linkCadastro{
-    margin-left: 690px;
+    display: flex;
+    justify-content: center;
 }
