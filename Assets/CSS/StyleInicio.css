@@ -2,18 +2,24 @@
 html{
     scroll-behavior: smooth;
 }
+header{
+    width: 100%;
+}
 .page-footer{
     background-color: var(--cor-principal) !important;
+    width: 100%;
+    height: ;
 }
 .container{
     background-color:white ;
+    width: 100%;
 }
 
 :root{
     --cor-principal: #48D1CC;
 }
 .brand-logo{
-    margin-left: 15px;
+   
 }
 
 .card-title{
@@ -31,6 +37,7 @@ html{
 
 #body{
     background-color: #bcf2f9;
+    height: 100%;
 }
 
 #BonLogin{
@@ -65,13 +72,6 @@ html{
     color: black !important;
 }
 
-#MenuImg{
-    width: 27px;
-    height: 27px;
-    margin-left: 10px;
-    margin-top: 20px;
-    
-}
 
 #buttonFechar{
     width:27px;
@@ -79,8 +79,8 @@ html{
 }
 
 #imgAnunc{
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
 }
 
 #annuncement{
@@ -89,8 +89,8 @@ html{
     
 }
 .card-title{
-    margin-left: 540px;
     justify-content: center;
+    height: 100%;
 }
 
 
@@ -98,7 +98,8 @@ html{
 #cards{
     display: flex;
     justify-content:center;
-    border-right: 0px;
+    height: 100%;
+    
 }
 
 #inconSearch{
